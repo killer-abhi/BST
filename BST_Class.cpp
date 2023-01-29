@@ -34,7 +34,7 @@ class BST
         }
         if (data < node->data)
         {
-            node->left = insert(data, root->left);
+            node->left = insert(data, node->left);
         }
         else
         {
@@ -95,7 +95,7 @@ class BST
     }
     void printTree(BinaryTreeNode<int> *node)
     {
-        cout<<"print";
+        // cout<<"print";
         if (node == NULL)
         {
             return;
@@ -117,7 +117,7 @@ class BST
 public:
     BST()
     {
-        cout<<"constructor";
+        // cout<<"constructor"<<'\t';
         root = NULL;
     }
     void deleteData(int data)
@@ -126,7 +126,7 @@ public:
     }
     void insert(int data)
     {
-        cout<<"insert";
+        // cout<<"insert"<<'\t';
         this->root = insert(data,root);
     }
     bool hasData(int data)
@@ -135,7 +135,7 @@ public:
     }
     void printTree()
     {
-        cout<<"printMain";
+        // cout<<"printMain";
         printTree(root);
     }
     ~BST()
